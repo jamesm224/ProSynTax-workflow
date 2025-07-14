@@ -233,26 +233,26 @@ Scripts used for genome subsetting and read simulation are located in the [valid
 
 ### *Prochlorococcus* Filtering Parameters
 #### 5% Misclassification Parameters  
-- *Prochlorococcus* Abundance > 0.76% 
+- *Prochlorococcus* Abundance > 0.15% 
   - Counts of *Prochlorococcus* reads out of *all* classified reads 
-- Ratio of *Prochlorococcus*:*Synechococcus* > 0.42
+- Ratio of *Prochlorococcus*:*Synechococcus* > 0.40
   - Ratio calculated by counts of *Prochlorococcus* divided by counts of *Synechococcus*
 
 #### 10% Misclassification Parameters
-- *Prochlorococcus* Abundance > 0.34% 
+- *Prochlorococcus* Abundance > 0.08% 
   - Counts of *Prochlorococcus* reads out of all classified reads 
 - Ratio of *Prochlorococcus*:*Synechococcus* > 0.23
   - Ratio calculated by counts of *Prochlorococcus* divided by counts of *Synechococcus*
 
 ### *Synechococcus* Filtering Parameters
 #### 5% Misclassification Parameters  
-- *Synechococcus* Abundance > 0.09% 
+- *Synechococcus* Abundance > 0.02% 
   - Counts of *Synechococcus* reads out of all classified reads 
-- Ratio *Synechococcus*:*Prochlorococcus* > 0.2 
+- Ratio *Synechococcus*:*Prochlorococcus* > 0.20 
   - Ratio calculated by counts of *Synechococcus* divided by counts of *Prochlorococcus*
 
 #### 10% Misclassification Parameters
-- *Synechococcus* Abundance > 0.04% 
+- *Synechococcus* Abundance > 0.03% 
   - Counts of *Synechococcus* reads out of *all* classified reads 
 - Ratio *Synechococcus*:*Prochlorococcus* > 0.10
   - Ratio calculated by counts of *Synechococcus* divided by counts of *Prochlorococcus*
