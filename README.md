@@ -40,7 +40,7 @@ This workflow and the accompanying ProSynTax dataset is described in:
        git clone https://github.com/jamesm224/ProSynTax-workflow/
 
 ### Installing ProSynTax
-All files associated with this workflow can be downloaded from the [Zenodo repository](https://doi.org/10.5281/zenodo.14889681) (DOI 10.5281/zenodo.14889681). 
+All files associated with this workflow can be downloaded from the [Zenodo repository](https://doi.org/10.5281/zenodo.14889680) (DOI 10.5281/zenodo.14889680). 
 
 Download the following **required** files into a directory on your machine: 
 1. ProSynTax_nodes.dmp
