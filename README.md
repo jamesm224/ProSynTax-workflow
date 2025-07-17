@@ -25,6 +25,7 @@ This workflow and the accompanying ProSynTax dataset is described in:
   * [Normalized Genome Equivalent Output](#normalized-genome-equivalent-output)
 * [Limit of Detection Filtering](#limit-of-detection-filtering)
 * [Intermediate Files](#intermediate-files)
+* [How to build your own version of ProSynTax](#how-to-build-your-own-version-of-prosyntax)
 
 
 ## Setting up the Workflow
@@ -41,7 +42,7 @@ This workflow and the accompanying ProSynTax dataset is described in:
 
 ### Installing ProSynTax
 All files associated with this workflow can be downloaded from the [Zenodo repository](https://doi.org/10.5281/zenodo.14889680) (DOI 10.5281/zenodo.14889680). 
-Make sure to use the most up to date version of Zenodo for downloading files (As of July 2025 it is v2)
+Make sure to use the most up to date version of Zenodo for downloading files (v2 as of July 2025).
 
 Download the following **required** files into a directory on your machine: 
 1. ProSynTax_nodes.dmp
@@ -49,9 +50,9 @@ Download the following **required** files into a directory on your machine:
 3. ProSynTax_v1.1.fmi.bz2
 4. CyCOG6.dmnd
 
-- **Note**: Make sure to unzip ProSynTax_v1.1.fmi.bz2 prior to usage `bzip2 -dk ProSynTax_v1.1.fmi.bz2`
-
-- **Note**: The path to these files will be needed later in the `inputs/config.yaml` file in step 1 of section [Edit Workflow Parameters](#edit-workflow-parameters). 
+- **Notes**:
+  - Make sure to unzip ProSynTax_v1.1.fmi.bz2 prior to usage `bzip2 -dk ProSynTax_v1.1.fmi.bz2`
+  - The path to these files will be needed later in the `inputs/config.yaml` file in step 1 of section [Edit Workflow Parameters](#edit-workflow-parameters). 
 
 ### Installing Dependencies
 1. Install Mamba following instructions on the [official Mamba documentation](https://mamba.readthedocs.io/en/latest/installation/mamba-installation.html). Or follow the steps below for installation into Linux system: 
@@ -268,4 +269,4 @@ For visualization of clade/grade/cluster composition, we have devised a list of 
 This workflow produces several intermediate files that may be useful for additional analysis. Descriptions of these files can be found [here](docs/readme_extras/intermediate_files.md). 
 
 ## How to build your own version of ProSynTax
-In the case that you wish to develop your own version of ProSynTax, we provided a smaller version of the dataset without any NCBI RefSeq Genomes (ProSynTax_v1.1_without_refseq.faa.bz2). This dataset contains the annotated *Prochlorcoccus*, *Synechococcus*, marine heterotrophs, and all of GORG-tropics. You can easily add additional genomes to this database. If you run into errors, ensure to update the names and nodes files with updated NCBI taxonomy.
+In the case that you wish to develop your own version of ProSynTax, we provided a smaller version of the dataset without any NCBI RefSeq Genomes (ProSynTax_v1.1_without_refseq.faa.bz2). This dataset contains the annotated *Prochlorcoccus*, *Synechococcus*, marine heterotrophs, and all of GORG-tropics. You can easily add additional genomes to this dataset. If you run into errors, ensure to update the names and nodes files with updated NCBI taxonomy.
