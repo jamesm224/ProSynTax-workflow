@@ -246,13 +246,13 @@ Scripts used for genome subsetting and read simulation are located in the [valid
 
 ### *Synechococcus* Filtering Parameters
 #### 5% Misclassification Parameters  
-- *Synechococcus* Abundance > 0.02% 
+- *Synechococcus* Abundance > 0.03% 
   - Counts of *Synechococcus* reads out of all classified reads 
 - Ratio *Synechococcus*:*Prochlorococcus* > 0.20 
   - Ratio calculated by counts of *Synechococcus* divided by counts of *Prochlorococcus*
 
 #### 10% Misclassification Parameters
-- *Synechococcus* Abundance > 0.03% 
+- *Synechococcus* Abundance > 0.02% 
   - Counts of *Synechococcus* reads out of *all* classified reads 
 - Ratio *Synechococcus*:*Prochlorococcus* > 0.10
   - Ratio calculated by counts of *Synechococcus* divided by counts of *Prochlorococcus*
