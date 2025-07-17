@@ -266,3 +266,6 @@ For visualization of clade/grade/cluster composition, we have devised a list of 
 
 ## Intermediate Files
 This workflow produces several intermediate files that may be useful for additional analysis. Descriptions of these files can be found [here](docs/readme_extras/intermediate_files.md). 
+
+## How to build your own version of ProSynTax
+In the case that you wish to develop your own version of ProSynTax, we provided a smaller version of the dataset without any NCBI RefSeq Genomes (ProSynTax_v1.1_without_refseq.faa.bz2). This dataset contains the annotated *Prochlorcoccus*, *Synechococcus*, marine heterotrophs, and all of GORG-tropics. You can easily add additional genomes to this database. If you run into errors, ensure to update the names and nodes files with updated NCBI taxonomy.
