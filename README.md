@@ -41,12 +41,15 @@ This workflow and the accompanying ProSynTax dataset is described in:
 
 ### Installing ProSynTax
 All files associated with this workflow can be downloaded from the [Zenodo repository](https://doi.org/10.5281/zenodo.14889680) (DOI 10.5281/zenodo.14889680). 
+Make sure to use the most up to date version of Zenodo for downloading files (As of July 2025 it is v2)
 
 Download the following **required** files into a directory on your machine: 
 1. ProSynTax_nodes.dmp
 2. ProSynTax_names.dmp
-3. ProSynTax_file.fmi
+3. ProSynTax_v1.1.fmi.bz2
 4. CyCOG6.dmnd
+
+- **Note**: Make sure to unzip ProSynTax_v1.1.fmi.bz2 prior to usage `bzip2 -dk ProSynTax_v1.1.fmi.bz2`
 
 - **Note**: The path to these files will be needed later in the `inputs/config.yaml` file in step 1 of section [Edit Workflow Parameters](#edit-workflow-parameters). 
 
