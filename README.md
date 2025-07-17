@@ -2,7 +2,7 @@
 
 
 ## Introduction
-Here we present a workflow that accompanies ProSynTax - a curated protein sequence dataset aimed at enhancing the taxonomic resolution of *Prochlorococcus* and *Synechococcus* classification. ProSynTax includes proteins from 1,260 genomes of *Prochlorococcus* and *Synechococcus*, including single amplified genomes, high-quality draft genomes, and newly closed genomes. Additionally, ProSynTax incorporates proteins from 27,799 genomes of marine heterotrophic bacteria, archaea, and viruses to assess microbial and viral communities surrounding *Prochlorococcus* and *Synechococcus*. This resource enables accurate classification of picocyanobacterial clusters/clades/grades in metagenomic data – even when present at 0.60% of reads for *Prochlorococcus* or 0.09% of reads for *Synechococcus*. 
+Here we present a workflow that accompanies ProSynTax - a curated protein sequence dataset aimed at enhancing the taxonomic resolution of *Prochlorococcus* and *Synechococcus* classification. ProSynTax includes proteins from 1,260 genomes of *Prochlorococcus* and *Synechococcus*, including single amplified genomes, high-quality draft genomes, and newly closed genomes. Additionally, ProSynTax incorporates proteins from 41,753 genomes of marine heterotrophic bacteria, archaea, and viruses to assess microbial and viral communities surrounding *Prochlorococcus* and *Synechococcus*. This resource enables accurate classification of picocyanobacterial clusters/clades/grades in metagenomic data – even when present at 0.15% of reads for *Prochlorococcus* or 0.03% of reads for *Synechococcus*. 
 
 ![Phylogenetic Tree](docs/images/figure1.svg "Phylogenetic Tree")
 
