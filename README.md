@@ -274,8 +274,8 @@ In the case that you wish to develop your own version of ProSynTax, we provided 
 In the event that you would like to add new genomes to the ProSynTax database please follow the following steps.
 1. Convert nucleotide sequences to protein sequences (ensure that no stop codons are present within the sequences)
 2. For each genome ensure you create a unique identifier. They must be added to the end of each protein sequences.
-   "genome1-orf1_{identifier_number} -> ie. >MIT0701-NODE1635_8000886"
-3. Update the names/nodes files to ensure the new genomes are included. It must include NCBI names/nodes files and the unique names/nodes files for ProSynTax genomes.
-4. Add the new genomes to faa file available for download on Zenodo.
-5. If you want additional details on creating a custom kaiju database, please take a look at the Kaiju Github: https://github.com/bioinformatics-centre/kaiju
+         genome1-orf1_{identifier_number} -> ie. >MIT0701-NODE1635_8000886
+4. Update the names/nodes files to ensure the new genomes are included. It must include NCBI names/nodes files and the unique names/nodes files for ProSynTax genomes.
+5. Add the new genomes to faa file available for download on Zenodo.
+6. If you want additional details on creating a custom kaiju database, please take a look at the Kaiju Github: https://github.com/bioinformatics-centre/kaiju
 
