@@ -8,7 +8,7 @@ Here we present a workflow that accompanies ProSynTax - a curated protein sequen
 
 ## Publication 
 This workflow and the accompanying ProSynTax dataset is described in:  
-         [ADD CITATION]
+         Coe, A., Mullet, J.I., Vo, N.N. et al. A curated protein dataset for taxonomic classification of Prochlorococcus and Synechococcus in metagenomes. Sci Data 12, 1895 (2025). https://doi.org/10.1038/s41597-025-06164-5
 
 ## Table of Contents
 * Setting up the Workflow
