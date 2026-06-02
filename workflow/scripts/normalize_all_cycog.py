@@ -17,6 +17,10 @@ Steps:
 
 James Mullet & Nhi N. Vo 
 10/16/24 
+
+Bug Fix June 2 2026. Total cycog len for all genomes was expressed in units of nucleotides rather than amino acids, resulting in an undercount by a factor of 3. Change made in "cycog_normalize". 
+
+
 """
 import pandas as pd 
 from pathlib import Path 
@@ -143,7 +147,7 @@ def cycog_normalize(df, cycog_list):
         sum_alnm_len = cdf['alignment_length'].sum()
 
         # obtain_genome_equivalence
-        total_cycog_len = 359404.6391
+        total_cycog_len = 119802.5464
         genome_equivalents = sum_alnm_len / total_cycog_len
 
         normalized_data['genus'].append(genus)

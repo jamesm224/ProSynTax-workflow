@@ -11,6 +11,9 @@ This workflow and the accompanying ProSynTax dataset is described in:
 
          Coe, A., Mullet, J.I., Vo, N.N. et al. A curated protein dataset for taxonomic classification of Prochlorococcus and Synechococcus in metagenomes. Sci Data 12, 1895 (2025). https://doi.org/10.1038/s41597-025-06164-5
 
+## Bug Fix June 2026. 
+A bug was identified that resulted in undercounting genome equivalents by a factor of 3. In the normalization by average cycog length, the denominator was expressed in terms of nucleotides rather than amino acids (script "normalize_all_cycog.py"). This calculation is updated in the bug fix branch "GE_bugFix". 
+
 ## Table of Contents
 * Setting up the Workflow
   * [Installing the ProSynTax Workflow](#installing-the-prosyntax-workflow) 
