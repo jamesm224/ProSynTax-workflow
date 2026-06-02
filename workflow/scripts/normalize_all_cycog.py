@@ -5,20 +5,22 @@ Purpose: Normalization of classified read count using 424 CyCOG.
     - Output: tab delimited file (no headers): [sample, genus, clade, alignment_len, genome_equivalents]
         - Note: output file is 1 line 
         - alignment_len = sum of alignment length of unique hits
-        - genome_equivalents = alignment_len / 359404.6391
+        - genome_equivalents = alignment_len / 119802.5464
             
 Steps:
     - Obtain unique hit per read
         - Sort by alignment length and keep highest alignment length per read
     - Filter for hits to 424 cycog list 
     - Sum up alignment length 
-    - Divide alignment length by 359404.6391
-        - 359404.6391 = sum of 424 CyCOG mean length
+    - Divide alignment length by 359404.6391 Nucleotides or 119802.5464 AAs
+        - 119802.5464 = sum of 424 CyCOG mean length
 
 James Mullet & Nhi N. Vo 
 10/16/24 
 
-Bug Fix June 2 2026. Total cycog len for all genomes was expressed in units of nucleotides rather than amino acids, resulting in an undercount by a factor of 3. Change made in "cycog_normalize". 
+Bug Fix June 2 2026. Total cycog len for all genomes was expressed in units of 
+nucleotides rather than amino acids, resulting in an undercount by a factor of 3. 
+Change made in "cycog_normalize". 
 
 
 """
