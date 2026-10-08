@@ -5,15 +5,16 @@ Purpose: Normalization of classified read count using 424 CyCOG.
     - Output: tab delimited file (no headers): [sample, genus, clade, alignment_len, genome_equivalents]
         - Note: output file is 1 line 
         - alignment_len = sum of alignment length of unique hits
-        - genome_equivalents = alignment_len / 119802.5464
+        - genome_equivalents = alignment_len / (sum of CyCOG mean lengths)
             
 Steps:
     - Obtain unique hit per read
         - Sort by alignment length and keep highest alignment length per read
     - Filter for hits to 424 cycog list 
     - Sum up alignment length 
-    - Divide alignment length by 359404.6391 Nucleotides or 119802.5464 AAs
-        - 119802.5464 = sum of 424 CyCOG mean length
+    - Divide alignment length by the sum of the CyCOG mean lengths, read at
+      runtime from the cycog_file (column 2). Diamond reports alignment length
+      in amino acids, and cycog_len.tsv is in amino acids, so the two agree.
 
 James Mullet & Nhi N. Vo 
 10/16/24 
@@ -128,7 +129,7 @@ def import_read_classification(fpath):
 
     return df
 
-def cycog_normalize(df, cycog_list):
+def cycog_normalize(df, cycog_list, total_cycog_len):
     """
     """
     # filter df for cycogs in list
@@ -149,7 +150,6 @@ def cycog_normalize(df, cycog_list):
         sum_alnm_len = cdf['alignment_length'].sum()
 
         # obtain_genome_equivalence
-        total_cycog_len = 119802.5464
         genome_equivalents = sum_alnm_len / total_cycog_len
 
         normalized_data['genus'].append(genus)
@@ -175,6 +175,9 @@ def main():
     cycog_df = pd.read_table(cycog_fpath,header=None, names=['cycog_iid','mean_length'])
     cycog_list = cycog_df['cycog_iid'].values.tolist()
 
+    # normalization denominator: sum of the mean lengths of those same cycogs
+    total_cycog_len = cycog_df['mean_length'].sum()
+
     # import diamond output file 
     diamond_df = import_diamond_output(diamond_fpath)    
 
@@ -186,7 +189,7 @@ def main():
 
     # normalize each clade 
     if len(df) > 0:
-        df = cycog_normalize(df, cycog_list)
+        df = cycog_normalize(df, cycog_list, total_cycog_len)
     else:
         # make empty df
         df = pd.DataFrame({

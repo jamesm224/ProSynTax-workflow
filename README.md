@@ -14,6 +14,15 @@ This workflow and the accompanying ProSynTax dataset is described in:
 ## Bug Fix June 2026. 
 A bug was identified that resulted in undercounting genome equivalents by a factor of 3. In the normalization by average cycog length, the denominator was expressed in terms of nucleotides rather than amino acids (script "normalize_all_cycog.py"). This calculation is updated in the bug fix branch "GE_bugFix". 
 
+## Missing 424th core CyCOG
+
+`inputs/cycog_len.tsv` contained 423 of the 424 single-copy core CyCOGs. The missing entry is CyCOG_60001271 (Protein of unknown function, DUF2518; 387 genes; mean length 157.73385012919897 aa). The same record is truncated in the Zenodo `average_cycog_length.csv`, whose final line reads `CyCOG_60001271,` with no value and no trailing newline, so both files appear to have been cut short at the same last record.
+
+The core set was reconstructed to confirm the identity of the missing entry. The 423 listed CyCOGs are present in exactly one copy in exactly 93 genomes (67 *Prochlorococcus*, 26 *Synechococcus*); asking in turn which CyCOGs are single-copy across all 93 of those genomes returns exactly 424, being the listed 423 plus CyCOG_60001271, and matching the 424 identifiers in the Zenodo CSV. Mean lengths were recomputed from CyCOG6 over all genes assigned to each CyCOG, reproducing all 423 existing values with a maximum absolute difference of 0.0, so the table differs from the previous one only by the added row.
+
+Because `normalize_all_cycog.py` filters reads to exactly the CyCOGs listed in this file and divides by the summed mean length of that same list, the estimator is self-consistent at any marker-set size and this correction does not systematically shift genome equivalents: the added row raises the denominator by 157.73 aa and simultaneously admits the reads that best-match CyCOG_60001271 to the numerator. Being a single-copy core gene, it recruits reads wherever these genera are present, so the two changes cancel in practice. The complete table is correct and contributes marginally more sequence to each estimate.
+
+
 ## Table of Contents
 * Setting up the Workflow
   * [Installing the ProSynTax Workflow](#installing-the-prosyntax-workflow) 
@@ -207,7 +216,7 @@ Below is a description of the steps in ProSynTax workflow.
   - Using the custom Python script `normalize_all_cycog.py`, reads are normalized by clade following these steps: 
     - Filter for reads with hits to the 424 CyCOGs protein database 
     - Obtain sum of alignment length 
-    - Divide alignment length of read mapped to CyCOG by the sum of 424 CyCOG mean length, which is 59404.6391
+    - Divide alignment length of read mapped to CyCOG by the sum of the CyCOG mean lengths in `inputs/cycog_len.tsv`, computed at runtime
   - All normalized output files are aggregated into file results table `normalized_counts.tsv`. 
 
 
